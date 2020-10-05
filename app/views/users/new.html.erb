@@ -17,9 +17,13 @@
       <%= f.submit "Sign up", class: 'btn btn-info w-25'%>
     </div>
   <%end%>
-  <div class="border border-danger px-2 py-1 rounded">
-    <% @user.errors.full_messages.each do |error| %>
-      <li class="text-danger list-unstyled"><%= error %></li>
-    <% end %>
+  <div class="d-flex justify-content-center">
+    <p>or</p>
+    <%= link_to 'Login', new_session_path, class: 'btn-link ml-1 text-decoration-none'%>
   </div>
+    <div class="px-2 py-1 rounded text-center">
+      <% @user.errors.full_messages.each do |error| %>
+          <li class="text-danger list-unstyled"><%= error %></li>
+      <% end %>
+    </div>
 </div>

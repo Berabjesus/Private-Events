@@ -11,7 +11,7 @@
 
   <body>
     <header class="fixed-top w-100">
-      <nav class="navbar navbar-dark bg-dark w-100 d-flex shadow">
+      <nav class="navbar bg-theme w-100 d-flex shadow">
         <div>
           <%= link_to root_path, class: 'text-decoration-none' do %>
             <h2>Private Events</h2>
@@ -23,7 +23,7 @@
     </header>
     <main class="container py-4 mt-5">
       <% if flash[:notice]%>
-        <div class="alert alert-info bg-light border border-light text-dark text-center">
+        <div class="alert alert-info bg-info text-dark text-center">
         <strong><%= notice%></strong>
         </div>
       <%end%>
