@@ -11,4 +11,8 @@ module ApplicationHelper
     end
     links
   end
+
+  def date_format(event)
+    event.date.to_formatted_s(:long) unless event.date.nil?
+  end
 end
