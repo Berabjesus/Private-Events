@@ -10,8 +10,10 @@
     <div class="card-footer bg-theme text-white px-0">
       <p class="h4">Event Date:-  <%= locals[:date]%></p>
     </div>
+    <div>
+      <%= link_to "Attend", invites_path(:controller => "invites", :action => "create", :event_id=> locals[:event_id]), method: :post, class: 'btn disabled' %>
+    </div>
   </div>
-  <%= link_to "Attend", invites_path(:event_id), method: :post %>
   
         
       
