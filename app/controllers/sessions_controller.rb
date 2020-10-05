@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:username])
       if @user && @user.authenticate(params[:password])
         session[:private_events_id_session] = @user.id
-        redirect_to user_path
+        redirect_to user_path(current_user)
       else
         redirect_to sessions_new_path, alert: "You are not signed up!"
       end

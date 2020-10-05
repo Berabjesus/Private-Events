@@ -1,6 +1,9 @@
-<div class="border bg-light mt-3 py-3 col-sm-5 mx-auto">
-  <h1 class="my-4">Login</h1>
-  <%= form_tag '/login', class: 'form-horizontal' do %>
+<div class="border mt-3 py-3 col-sm-5 mx-auto bg-theme text-white">
+  <div class="border-bottom text-center">
+    <h1>Private Events</h1>
+  </div>
+  <h1 class="my-4 text-center">Login</h1>
+  <%= form_tag '/sessions', class: 'form-horizontal' do %>
   <div class="form-group">
     <%= label_tag :Username, "User Name"%>
     <%= text_field_tag :username,"", class: 'form-control'%>
@@ -9,10 +12,12 @@
     <%= label_tag :password%>
     <%= password_field_tag :password,"", class: 'form-control'%>
   </div>
+  <div class="form-group w-100 text-center">
     <%= submit_tag "Login", class: 'btn btn-info'%>
+  </div>
   <%end%>
 
-  <div class="mt-4 d-flex">
+  <div class="mt-4 d-flex justify-content-center">
     <p class="mb-2">Not Signed up?</p>
     <%= link_to 'Sign Up', new_user_path, class: 'btn-link ml-2'%>
   </div>
