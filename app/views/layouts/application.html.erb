@@ -18,8 +18,9 @@
           <%end%>
         </div>
         <div class="btn-group-lg text-white">
-          <%= user_status[0]%>
-          <%= user_status[1]%>
+          <% user_status.each do |button|%>
+            <%= button%>
+          <%end%>
         </div>
       </nav>
     </header>

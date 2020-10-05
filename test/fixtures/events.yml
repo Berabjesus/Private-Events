@@ -3,9 +3,11 @@
 one:
   title: MyString
   description: MyText
-  date: 2020-10-05 18:25:24
+  date: 2020-10-05 18:35:36
+  user: one
 
 two:
   title: MyString
   description: MyText
-  date: 2020-10-05 18:25:24
+  date: 2020-10-05 18:35:36
+  user: two

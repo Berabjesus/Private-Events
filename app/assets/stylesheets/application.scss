@@ -6,7 +6,10 @@
   background-color: #262335;
 }
 
-
+.hover-1:hover {
+  transform: scale(1.01);
+  border: 3px solid rgb(52, 61, 182);
+}
 
 // body
 body {

@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def logged_in?
     session[:private_events_id_session].present?
   end
+
+  def authorized
+    redirect_to new_session_path, alert: 'You are not logged in' unless logged_in?
+  end
 end
