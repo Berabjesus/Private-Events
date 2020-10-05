@@ -10,6 +10,29 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="fixed-top w-100">
+      <nav class="navbar navbar-dark bg-dark w-100 d-flex shadow">
+        <div>
+          <%= link_to root_path, class: 'text-decoration-none' do %>
+            <h2>Private Events</h2>
+          <%end%>
+        </div>
+        <div class="btn-group-lg">
+        </div>
+      </nav>
+    </header>
+    <main class="container py-4 mt-5">
+      <% if flash[:notice]%>
+        <div class="alert alert-info bg-light border border-light text-dark text-center">
+        <strong><%= notice%></strong>
+        </div>
+      <%end%>
+      <% if flash[:alert]%>
+        <div class="alert alert-warning text-center text-white bg-danger border m-0 w-100">
+        <strong class="h5"><%= alert.html_safe%></strong>
+        </div>
+      <%end%>
+      <%= yield %>
+    </main>
   </body>
 </html>
