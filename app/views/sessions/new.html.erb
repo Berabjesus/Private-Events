@@ -16,10 +16,4 @@
     <p class="mb-2">Not Signed up?</p>
     <%= link_to 'Sign Up', new_user_path, class: 'btn-link ml-2'%>
   </div>
-
-  <div class="mt-4 d-flex">
-    <%= form_tag '/guest', class: 'form-horizontal' do %>
-      <%= submit_tag "Visit as a Guest", class: 'btn btn-info'%>
-    <%end%>
-  </div>
 </div>
