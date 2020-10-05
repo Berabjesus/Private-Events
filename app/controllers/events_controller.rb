@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authorized
   def index
     @events = Event.all.order('created_at DESc')
   end
@@ -8,8 +9,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
-    @event.user_id = current_user.id
+    @event = current_user.events.build(event_params)
     if @event.valid? && @event.save
       redirect_to events_path, notice: 'Event Created Successfully'
     else

@@ -1,23 +1,11 @@
-<div class="border d-flex flex-column">
+<div class="d-flex flex-column">
   <div class="border-bottom pb-3 text-center mb-3">
-    <h2>showing <%=pluralize(@events.count, 'Events')%></h2>
+    <h2>Showing <%=pluralize(@events.count, 'Events')%></h2>
   </div>
   <div>
     <%@events.each do |event|%>
       <%= link_to event_path(event), class:'text-decoration-none' do%>
-        <div class="card bg-light mx-2 hover-1">
-          <div class="card-title bg-theme text-white">
-            <div class="d-flex">
-              <p class="h4">Event Title:-  <%=event.title%></p>
-            </div>
-          </div>
-          <div class="card-body bg-light text-dark">
-            <p class="h4"><%=event.description%></p>
-          </div>
-          <div class="card-footer bg-theme text-white px-0">
-            <p class="h4">Event Date:-  <%= date_format event %></p>
-          </div>
-        </div>
+        <%= render 'event', locals: {title: event.title, desc: event.description, date: (date_format event)}%>
       <%end%>
     <%end%>
   </div>
