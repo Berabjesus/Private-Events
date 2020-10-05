@@ -5,7 +5,7 @@
   <div>
     <%@events.each do |event|%>
       <%= link_to event_path(event), class:'text-decoration-none' do%>
-        <%= render 'event', locals: {title: event.title, desc: event.description, date: (date_format event)}%>
+        <%= render 'event', locals: {title: event.title, desc: event.description, date: (date_format event), event_id: event.id}%>
       <%end%>
     <%end%>
   </div>
