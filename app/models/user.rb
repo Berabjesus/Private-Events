@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_secure_password
   validates :username, presence: true, uniqueness: true
@@ -6,4 +8,3 @@ class User < ApplicationRecord
   has_many :attendances, dependent: :destroy
   has_many :attended_events, class_name: 'Event', foreign_key: 'event_id', through: :attendances
 end
-
