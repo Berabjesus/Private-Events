@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_05_213357) do
+ActiveRecord::Schema.define(version: 2020_10_06_174133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,13 +25,13 @@ ActiveRecord::Schema.define(version: 2020_10_05_213357) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "invites", force: :cascade do |t|
+  create_table "invites", id: :bigint, default: -> { "nextval('attendance_id_seq'::regclass)" }, force: :cascade do |t|
     t.bigint "event_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["event_id"], name: "index_invites_on_event_id"
-    t.index ["user_id"], name: "index_invites_on_user_id"
+    t.index ["event_id"], name: "index_attendance_on_event_id"
+    t.index ["user_id"], name: "index_attendance_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :events, only: [:new, :index, :show, :create]
   resources :users, only: [:new, :create, :show]
-  resources :invites, only: [:create, :destroy]
+  resources :attendances, only: [:create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
   get "/users", to: "users#new"
   post "/sessions", to: "sessions#create"

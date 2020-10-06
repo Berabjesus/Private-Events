@@ -1,6 +1,6 @@
-class InvitesController < ApplicationController
+class AttendancesController < ApplicationController
   def create
-    @attend = Invite.new
+    @attend = Attendance.new
     @attend.user_id = current_user.id
     @attend.event_id =  params[:event_id]
     if @attend.valid? && @attend.save

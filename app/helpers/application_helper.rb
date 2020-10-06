@@ -15,15 +15,15 @@ module ApplicationHelper
   def user_attending? event_id
     links = []
     if all_events_attended_by_user.find_by(id: event_id)
-      links[0] = link_to "Your Attending This Event", invites_path(:controller => "invites", :action => "create", :event_id=> event_id), method: :post, class: 'btn btn-success disabled '
-      links[1] = link_to "Don't Attend", invite_path(event_id), method: :delete, class: 'btn btn-warning mt-1'
+      links[0] = link_to "Your Attending This Event", attendances_path(:controller => "attendances", :action => "create", :event_id=> event_id), method: :post, class: 'btn btn-success disabled '
+      links[1] = link_to "Don't Attend", attendance_path(event_id), method: :delete, class: 'btn btn-warning mt-1'
     else
-      links[0] = link_to "Attend", invites_path(:controller => "invites", :action => "create", :event_id=> event_id), method: :post, class: 'btn btn-info'
-      links[1] = link_to "Don't Attend", invite_path(event_id), method: :delete, class: 'btn btn-warning disabled mt-1'
+      links[0] = link_to "Attend", attendances_path(:controller => "invites", :action => "create", :event_id=> event_id), method: :post, class: 'btn btn-info'
+      links[1] = link_to "Don't Attend", attendance_path(event_id), method: :delete, class: 'btn btn-warning disabled mt-1'
     end
     links
   end
-  
+
   def render_event event
     render '/events/event', locals: {title: event.title, desc: event.description, date: (date_format event), event_id: event.id, creator: event.creator.username}
   end
