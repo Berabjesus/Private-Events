@@ -11,9 +11,16 @@
   border: 3px solid rgb(52, 61, 182);
 }
 
-.auto-scroll-height {
-  height: 70vh;
+.auto-scroll-height, .auto-scroll-height-1 {
   overflow: auto;
+}
+
+.auto-scroll-height {
+  height: 90vh;
+}
+
+.auto-scroll-height-1 {
+  height: 70vh;
 }
 
 // body

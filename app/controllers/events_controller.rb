@@ -3,7 +3,8 @@ class EventsController < ApplicationController
   helper_method :events_user_attending, :test
 
   def index
-    @events = Event.all.order('created_at DESc')
+    @past_events = Event.past
+    @upcoming_events = Event.upcoming
   end
 
   def new
@@ -13,7 +14,7 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.build(event_params)
     if @event.valid? && @event.save
-      redirect_to events_path, notice: 'Event Created Successfully'
+      redirect_to user_path(current_user), notice: 'Event Created Successfully'
     else
       render 'new'
     end

@@ -1,12 +1,26 @@
-<div class="d-flex flex-column">
-  <div class="border-bottom pb-3 text-center mb-3">
-    <h2>Showing <%=pluralize(@events.count, 'Event')%></h2>
+<div class="row">
+  <div class="col-sm-6 auto-scroll-height">
+    <h1>Upcoming events: <%=pluralize(@upcoming_events.count, 'Event')%></h1>
+    <div class="d-flex flex-column">
+      <div>
+        <%@upcoming_events.each do |event|%>
+          <%= link_to event_path(event), class:'text-decoration-none' do%>
+            <%=render_event event%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
   </div>
-  <div>
-    <%@events.each do |event|%>
-      <%= link_to event_path(event), class:'text-decoration-none' do%>
-        <%= render 'event', locals: {title: event.title, desc: event.description, date: (date_format event), event_id: event.id}%>
-      <%end%>
-    <%end%>
-  </div>
+  <div class="col-sm-6 auto-scroll-height">
+    <h1>Past events: <%=pluralize(@past_events.count, 'Event')%></h1>
+    <div class="d-flex flex-column">
+      <div>
+        <%@past_events.each do |event|%>
+          <%= link_to event_path(event), class:'text-decoration-none' do%>
+            <%=render_event event%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  </div>  
 </div>

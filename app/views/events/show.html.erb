@@ -1,4 +1,4 @@
-<%= render 'event', locals: {title: @event.title, desc: @event.description, date: (date_format @event), event_id: @event.id}%>
+<%= render 'event', locals: {title: @event.title, desc: @event.description, date: (date_format @event), event_id: @event.id}, creator: @event.creator.username}%>
 <div class="d-flex flex-column">
   <div class="d-flex justify-content-between border-bottom border-dark pb-4">
     <h3 class="align-self-center">Total attendees: <%= @event.attendees.count%></h3>

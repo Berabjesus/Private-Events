@@ -23,8 +23,8 @@ module ApplicationHelper
     end
     links
   end
-
-  def date_format(event)
-    event.date.to_formatted_s(:long) unless event.date.nil?
+  
+  def render_event event
+    render '/events/event', locals: {title: event.title, desc: event.description, date: (date_format event), event_id: event.id, creator: event.creator.username}
   end
 end
