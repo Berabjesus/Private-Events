@@ -1,4 +1,17 @@
-<% @user.events.order('created_at DESC').each do |event|%>
-  <%= render '/events/event', locals: {title: event.title, desc: event.description, date: (date_format event)}%>
-<%end%>
+<h1 class="text-center border-bottom border-dark pb-3">Your Events</h1>
+
+<div class="row">
+  <div class="col-sm-4 auto-scroll-height">
+    <h4>Events you created: <%= all_events_created_by_user.count%></h4>
+    <% all_events_created_by_user.order('created_at DESC').each do |event|%>
+      <%= render '/events/event', locals: {title: event.title, desc: event.description, date: (date_format event), event_id: event.id}%>
+    <%end%>
+  </div>
+  <div class="col-sm-4 auto-scroll-height">
+    <h4>upcoming Events: <%= all_events_attended_by_user.count%></h4>
+    <% all_events_attended_by_user.order('created_at DESC').each do |event|%>
+      <%= render '/events/event', locals: {title: event.title, desc: event.description, date: (date_format event), event_id: event.id}%>
+    <%end%>
+  </div>
+</div>
 

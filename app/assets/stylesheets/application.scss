@@ -11,6 +11,11 @@
   border: 3px solid rgb(52, 61, 182);
 }
 
+.auto-scroll-height {
+  height: 70vh;
+  overflow: auto;
+}
+
 // body
 body {
   background-color: #f8f8f8;

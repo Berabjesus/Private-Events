@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :authorized
-  helper_method :events_user_attending
+  helper_method :events_user_attending, :test
 
   def index
     @events = Event.all.order('created_at DESc')
@@ -27,9 +27,5 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :description, :date)
-  end
-
-  def events_user_attending
-    @events = current_user.attended_events
   end
 end
