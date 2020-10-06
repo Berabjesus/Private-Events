@@ -1,5 +1,5 @@
 # Private Event
-### This is a Microverse Ruby or rails project that is done in a similar manner to Eventbrite. It allows users to create events, attend events, remove attendance and see who is attending an event. It also has a login and sign up system to controll access.
+### This is a Microverse Ruby or rails project that is done to create a rails app that allows users to create events, attend events, remove attendance and see who is attending an event. It also has a login and sign up system to control access.
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
