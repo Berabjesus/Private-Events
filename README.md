@@ -11,13 +11,13 @@
 ## See the Live version here - > [Live Link](https://powerful-bayou-65691.herokuapp.com/)
 
 ### Sign up Interface
-<img src="./app/assets/images/1.JPG" width="1200px" height="500px" />
+<img src="./app/assets/images/1.JPG" width="1200px" height="450px" />
 
 ### Index
-<img src="./app/assets/images/2.JPG" width="1200px" height="500px" />
+<img src="./app/assets/images/2.JPG" width="1200px" height="450px" />
 
 ### Dashboard
-<img src="./app/assets/images/3.JPG" width="1200px" height="500px" />
+<img src="./app/assets/images/3.JPG" width="1200px" height="450px" />
 
 ## Built With
 
