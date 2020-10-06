@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :all_events_attended_by_user, :all_events_created_by_user, :date_format
   def current_user

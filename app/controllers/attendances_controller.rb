@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class AttendancesController < ApplicationController
   def create
     @attend = Attendance.new
