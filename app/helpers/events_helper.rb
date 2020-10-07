@@ -1,7 +1,5 @@
 module EventsHelper
-  def errors_checker event
-    if event.errors.any?
-      render '/events/errors'
-    end
+  def errors_checker(event)
+    render '/events/errors' if event.errors.any?
   end
 end

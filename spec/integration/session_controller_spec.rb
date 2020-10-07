@@ -20,7 +20,7 @@ RSpec.describe 'Sessions', type: :feature do
       expect(page).to have_content(/You are not signed up!/)
     end
 
-    it "Should redirect to signup page" do
+    it 'Should redirect to signup page' do
       visit new_session_path
       find('.btn-link').click
       expect(page).to have_content(/Sign Up/)
