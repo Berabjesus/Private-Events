@@ -22,6 +22,9 @@
 ## Built With
 
 - Ruby on Rails
+- Rspec gem
+- Capybara gem
+- Database_cleaner gem
 - Bootstrap
 - postgresql
 - VScode
@@ -38,10 +41,17 @@ Clone this project by typing ```git clone https://github.com/Berabjesus/Private-
 
 ### Run app
 - Type ```bundle install``` in the root file of the project.
+- This project uses postgresql, remove ```username: postgres``` and 
+  ```password: 1144``` credntials form config > database.yml that are used for local development.
 - Type  ```rails db:migrate``` in the root file of the project. 
 - Type ```rails s``` in the root file of the project.
 - Goto [local host](http://localhost:3000/)
 - You can go to rails console by typing ```rails console``` and create a user by using Active Record commands and methods.
+
+### Test instructions
+- Go to the root directory of the project and open CLI
+- Type ```bundle exec rspec```
+- Get a report from the test.
 
 ## Author
 
