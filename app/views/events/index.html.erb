@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-sm-6 auto-scroll-height border">
+    <h1>Upcoming events: <%=pluralize(@upcoming_events.count, 'Event')%></h1>
+    <div class="d-flex flex-column">
+      <div>
+        <%@upcoming_events.each do |event|%>
+          <%= link_to event_path(event), class:'text-decoration-none' do%>
+            <%=render_event event%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 auto-scroll-height border">
+    <h1>Past events: <%=pluralize(@past_events.count, 'Event')%></h1>
+    <div class="d-flex flex-column">
+      <div>
+        <%@past_events.each do |event|%>
+          <%= link_to event_path(event), class:'text-decoration-none' do%>
+            <%=render_event event%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  </div>  
+</div>

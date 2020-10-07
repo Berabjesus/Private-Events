@@ -3,10 +3,26 @@
 // defaults
 
 .bg-theme {
-  background-color: #262335;;
+  background-color: #262335;
 }
 
+.hover-1:hover {
+  transform: scale(1.01);
+  border: 3px solid rgb(52, 61, 182);
+}
 
+.auto-scroll-height,
+.auto-scroll-height-1 {
+  overflow: auto;
+}
+
+.auto-scroll-height {
+  height: 85vh;
+}
+
+.auto-scroll-height-1 {
+  height: 60vh;
+}
 
 // body
 body {

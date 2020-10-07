@@ -1,0 +1,22 @@
+  <div class="card bg-light mb-4 py-4 px-3 border-info hover-1">
+    <div class="card-title bg-light text-dark border-bottom border-dark pb-2">
+      <div class="d-flex flex-column">
+        <p class="h4">Event Title:-  <%= locals[:title]%></p>
+        <p class="h4">Event By: <%=locals[:creator]%></p>
+      </div>
+    </div>
+    <div class="card-body bg-light text-dark px-0">
+      <p class="h4"><%=locals[:desc]%></p>
+    </div>
+    <div class="card-footer bg-info text-dark px-2">
+      <p class="h5">Event Date:-  <%= locals[:date]%></p>
+    </div>
+    <div class="mt-3">
+      <% (user_attending?locals[:event_id]).each do |button| %>
+        <%= button%>
+      <%end%>
+    </div>
+  </div>
+  
+        
+      

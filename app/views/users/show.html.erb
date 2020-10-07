@@ -1,4 +1,23 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1 class="text-center border-bottom border-dark pb-3">Your Events</h1>
+<div class="row">
+  <div class="col-sm-4 auto-scroll-height-1">
+    <h4 class="p-2 bg-theme text-white">Events you created: <%= all_events_created_by_user.count%></h4>
+    <% all_events_created_by_user.order('created_at DESC').each do |event|%>
+      <%=render_event event%>
+    <%end%>
+  </div>
+  <div class="col-sm-4 auto-scroll-height-1 border-left border-right border-dark">
+    <h4 class="p-2 bg-theme text-white">upcoming Events: <%= all_events_attended_by_user.where("date > now()").count%></h4>
+    <% all_events_attended_by_user.where("date > now()").each do |event|%>
+      <%=render_event event%>
+    <%end%>
+  </div>
 
-<%= current_user.name%>
+  <div class="col-sm-4 auto-scroll-height-1">
+    <h4 class="p-2 bg-theme text-white">Previously attended events: <%= all_events_attended_by_user.where("date < now()").count%></h4>
+    <% all_events_attended_by_user.where("date < now()").each do |event|%>
+      <%=render_event event%>
+    <%end%>
+  </div>
+</div>
+

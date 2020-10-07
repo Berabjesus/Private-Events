@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authorized, only: [:show]
   def new
     @user = User.new
   end
@@ -6,13 +7,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.valid? && @user.save
-      redirect_to new_session_path, notice: 'Sign up successfull'
+      redirect_to new_session_path, notice: 'Sign up successful, login using your credentials'
     else
       render 'new'
     end
   end
 
   def show
+    @user = current_user
   end
 
   private

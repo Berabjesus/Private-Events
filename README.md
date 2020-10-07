@@ -1,24 +1,93 @@
-# README
+# Private Event
+### This is a Microverse Ruby or rails project that is done to create a rails app that allows users to create events, attend events, remove attendance and see who is attending an event. It also has a login and sign up system to control access.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![License: MIT][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Things you may want to cover:
+## See the Live version here - > [Live Link](https://powerful-bayou-65691.herokuapp.com/)
 
-* Ruby version
+### Sign up Interface
+<img src="./app/assets/images/1.JPG" width="1200px" height="450px" />
 
-* System dependencies
+### Index
+<img src="./app/assets/images/2.JPG" width="1200px" height="450px" />
 
-* Configuration
+### Dashboard
+<img src="./app/assets/images/3.JPG" width="1200px" height="450px" />
 
-* Database creation
+## Built With
 
-* Database initialization
+- Ruby on Rails
+- Rspec gem
+- Capybara gem
+- Database_cleaner gem
+- Bootstrap
+- postgresql
+- VScode
+- Rubocop
 
-* How to run the test suite
+## Getting Started on local repo
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+### Install
+In order to run, you need to install RUBY and Rails in your computer. For windows you can go to [Ruby installer](https://rubyinstaller.org/) and for MAC and LINUX you can go to [Ruby official site](https://www.ruby-lang.org/en/downloads/) for intructions on how to intall it.
 
-* ...
+Clone this project by typing ```git clone https://github.com/Berabjesus/Private-Events```
+
+### Run app
+- Type ```bundle install``` in the root file of the project.
+- This project uses postgresql, remove ```username: postgres``` and 
+  ```password: 1144``` credntials form config > database.yml that are used for local development.
+- Type  ```rails db:migrate``` in the root file of the project. 
+- Type ```rails s``` in the root file of the project.
+- Goto [local host](http://localhost:3000/)
+- You can go to rails console by typing ```rails console``` and create a user by using Active Record commands and methods.
+
+### Test instructions
+- Go to the root directory of the project and open CLI
+- Type ```bundle exec rspec```
+- Get a report from the test.
+
+## Author
+
+👤 **Bereket Beshane**
+
+- Github: [@berabjesus](https://github.com/Berabjesus)
+- Twitter: [@bereket_ababu_b](https://twitter.com/bereket_ababu_b)
+- Linkedin: [linkedin](https://www.linkedin.com/in/bereket-beshane-a1b75a1a9/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Heroku
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/Berabjesus/Private-Events
+[contributors-url]: https://github.com/Berabjesus/Private-Events/contributors
+[forks-shield]: https://img.shields.io/github/forks/Berabjesus/Private-Events
+[forks-url]:https://github.com/Berabjesus/Private-Events/network/members
+[stars-shield]: https://img.shields.io/github/stars/Berabjesus/Private-Events
+[stars-url]: https://github.com/Berabjesus/Private-Events/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Berabjesus/Private-Events
+[issues-url]: https://github.com/Berabjesus/Private-Events/issues
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-url]: https://github.com/Berabjesus/Private-Events/development/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/bereket-beshane-a1b75a1a9/

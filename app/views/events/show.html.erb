@@ -1,0 +1,14 @@
+<%= render 'event', locals: {title: @event.title, desc: @event.description, date: (date_format @event), event_id: @event.id, creator: @event.creator.username}%>
+<div class="d-flex flex-column">
+  <div class="d-flex justify-content-between border-bottom border-dark pb-4">
+    <h3 class="align-self-center">Total attendees: <%= @event.attendees.count%></h3>
+  </div>
+  <div class="mt-2">
+    <h3 class="border-bottom pb-3">Names of attendees</h3>
+    <% @event.attendees.each do |attendee|%>
+      <ul class="list-unstyled border-bottom border-primary pb-3">
+        <li class="h4"><%= attendee.username%></li>
+      </ul>
+    <%end%>
+  </div>
+</div>
