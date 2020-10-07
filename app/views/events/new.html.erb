@@ -15,12 +15,6 @@
 
   <%= f.submit 'Create Event', class: 'btn btn-success'%>
   <div>
-    <% if @event.errors.any?%>
-    <div class="alert alert-danger">
-      <% @event.errors.full_messages.each do |error|%>
-      <p class="larger-text"><%= error%></p>
-      <%end%>
-    </div>
-    <%end%>
+    <%= errors_checker @event%>
   </div>
 <%end%>

@@ -1,0 +1,5 @@
+<div class="alert alert-danger mt-3">
+  <% @event.errors.full_messages.each do |error|%>
+  <p class="larger-text"><%= error%></p>
+  <%end%>
+</div>
